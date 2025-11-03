@@ -1,6 +1,11 @@
-<div align="center" name="inicio">
-  <a href="*"><img title="SemParar" src="projetando.png" style="width: 300px;" /></a>
-</div>
-
 # EquipeProjetando
-repositório da EquipeProjetando para seu projeto da disciplina PROJETO INTEGRADO
+## :busts_in_silhouette: Equipe Projetando
+
+|  NOME                           |  FUNÇÃO                    |
+|  ----------------------------   |  --------------------------|
+|  Ana Luiza                      | Gestor de projeto e atendimento ao cliente   | 
+|  Pedro Manoel                   | Desenvolvedor Front-end                      |
+|  Emanuel Silva                  | Desenvolvedor Back-end                        |
+|  Alidja                         | Designer de Experiência (UX/UI)             |
+|  Maria Letícia                  | QA / Testes e Documentação                   |
+
