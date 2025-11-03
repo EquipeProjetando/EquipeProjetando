@@ -1,9 +1,13 @@
 # EquipeProjetando
 ## :busts_in_silhouette: Equipe Projetando
 <a name="sobre"></a>
-Olá, Este projeto está sendo desenvolvido para atender às necessidades do Instituto Vorp, uma instituição voltada para ações sociais. A realização deste projeto é ligada diretamente a disciplina de PROJETO INTEGRADO I.
+##Sobre
+ <div align="center" name="inicio">
+  <a href="*"><img title="instituto" src="header.png" style="width: 300px;" /></a>
+</div>
+Olá, Este projeto está sendo desenvolvido para atender às necessidades do Instituto Vorp, uma instituição voltada para ações sociais. A realização deste projeto é ligada diretamente a disciplina de PROJETO INTEGRADO I.7
 <a name="equipe"></a>
-
+##  Membros da Equipe
 |  NOME                           |  FUNÇÃO                    |
 |  ----------------------------   |  --------------------------|
 |  Ana Luiza                      | Gestor de projeto e atendimento ao cliente   | 
@@ -19,14 +23,10 @@ Olá, Este projeto está sendo desenvolvido para atender às necessidades do Ins
 </div>
  O Instituto Vorp,
 é uma organização sem fins lucrativos que atua apoiando projetos sociais e promovendo ações solidárias em comunidades vulneráveis. Suas atividades envolvem arrecadação e distribuição de roupas, brinquedos, alimentos e itens de higiene, além de parcerias com outras iniciativas sociais. 
-
 Atualmente, o controle das doações e atendimentos é feito de forma manual, utilizando planilhas e registros físicos, o que dificulta o acompanhamento das ações e a transparência com os doadores.
 Dessa forma, a necessidade principal é desenvolver um sistema digital acessível ao público, que permita cadastrar doações, doadores, beneficiários e instituições atendidas, além de consultar relatórios e histórico de ações.
- 
- O sistema visa organizar e centralizar informações, facilitar o engajamento de novos doadores e aumentar a transparência e eficiência das operações do Instituto.
-
-
-
+O sistema visa organizar e centralizar informações, facilitar o engajamento de novos doadores e aumentar a transparência e eficiência das operações do Instituto.
 
 <a name="ferramentas"></a>
-<a name="cliente"></a>
+## Ferramentas do projeto
+
