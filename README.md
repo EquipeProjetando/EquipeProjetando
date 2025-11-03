@@ -1,6 +1,6 @@
 
 <div align="center" name="inicio">
-  <a href="*"><img title="instituto" src="projetandologo.png" style="width: 300px;" /></a>
+  <a href="*"><img title="instituto" src="projetando.png" style="width: 500px;" /></a>
 </div>
 <h4>
   Sumário: 
