@@ -1,4 +1,12 @@
 # EquipeProjetando
+<h4>
+  Sumário: 
+ <a href="#sobre">Sobre</a> • 
+ <a href="#equipe">Equipe</a> • 
+ <a href="#cliente">Cliente</a> • 
+ <a href="#ferramentas">Ferramentas</a> • 
+</h4>
+
 <a name="sobre"></a>
 ## Sobre
  <div align="center" name="inicio">
