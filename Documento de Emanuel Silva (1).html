@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Vorp - Doações Recebidas</title>
+    <style>
+        :root {
+            --primary-color: #185a8f;
+            --secondary-color: #0159a1;
+            --accent-color: #8fb996;
+            --light-color: #f8f9fa;
+            --dark-color: #1e2a1e;
+            --success-color: #c1cf3e;
+            --warning-color: #ffc107;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 36px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover, nav ul li a.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar ul li a {
+            display: block;
+            padding: 10px;
+            color: var(--dark-color);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .sidebar ul li a:hover {
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+        }
+        
+        .sidebar ul li a.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .main-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .content-header h2 {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            color: white;
+        }
+        
+        .stat-card h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .stat-card .value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .donations-container {
+            margin-top: 30px;
+        }
+        
+        .donations-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .donations-header h3 {
+            color: var(--primary-color);
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        table th {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .donor-name {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .donation-amount {
+            font-weight: bold;
+            color: var(--success-color);
+            font-size: 18px;
+        }
+        
+        .donation-date {
+            color: #666;
+        }
+        
+        .donation-method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        
+        .method-pix {
+            background-color: #e7f5ff;
+            color: #1864ab;
+        }
+        
+        .method-card {
+            background-color: #fff3bf;
+            color: #e67700;
+        }
+        
+        .method-transfer {
+            background-color: #e6fcf5;
+            color: #0ca678;
+        }
+        
+        .recent-donations {
+            margin-top: 40px;
+        }
+        
+        .donation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .donation-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .donation-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .donation-card-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        .donation-card-amount {
+            font-weight: bold;
+            color: var(--success-color);
+            font-size: 20px;
+        }
+        
+        .donation-card-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .donation-card-message {
+            color: #555;
+            font-style: italic;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #eee;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: var(--dark-color);
+            border-top: 1px solid #eee;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                display: none;
+            }
+            
+            .header-content {
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .donation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Instituto Vorp</span>
+                </div>
+                <p class="tagline">Juntos transformamos vidas através da generosidade e solidariedade</p>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Doações</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Transparência</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard">
+            <aside class="sidebar">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="#" class="active">Doações Recebidas</a></li>
+                    <li><a href="#">Doadores</a></li>
+                    <li><a href="#">Campanhas Ativas</a></li>
+                    <li><a href="#">Relatórios Financeiros</a></li>
+                    <li><a href="#">Metas e Resultados</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 30px;">Filtros</h3>
+                <ul>
+                    <li><a href="#">Últimos 7 dias</a></li>
+                    <li><a href="#">Últimos 30 dias</a></li>
+                    <li><a href="#">Por Valor</a></li>
+                    <li><a href="#">Por Método de Pagamento</a></li>
+                </ul>
+            </aside>
+            
+            <main class="main-content">
+                <div class="content-header">
+                    <h2>Doações Recebidas</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-download"></i> Exportar Relatório
+                    </button>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total Arrecadado</h3>
+                        <div class="value">R$ 48.520,00</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Doações Este Mês</h3>
+                        <div class="value">R$ 12.350,00</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total de Doadores</h3>
+                        <div class="value">187</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Meta Mensal</h3>
+                        <div class="value">68%</div>
+                    </div>
+                </div>
+                
+                <div class="donations-container">
+                    <div class="donations-header">
+                        <h3>Últimas Doações</h3>
+                        <div>
+                            <button class="btn">
+                                <i class="fas fa-filter"></i> Filtrar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="donationsTable">
+                            <thead>
+                                <tr>
+                                    <th>Doador</th>
+                                    <th>Valor</th>
+                                    <th>Data</th>
+                                    <th>Método</th>
+                                </tr>
+                            </thead>
+                            <tbody id="donationsTableBody">
+                                <!-- Dados serão inseridos via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="recent-donations">
+                    <h3>Doações Recentes</h3>
+                    <div class="donation-cards" id="donationCards">
+                        <!-- Cards serão inseridos via JavaScript -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Instituto Vorp</span>
+                </div>
+                <p>Nenhum de nós é tão bom quanto todos nós juntos</p>
+                <div class="footer-links">
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Transparência</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+                <p>&copy; 2025 Instituto Vorp. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dados de exemplo para simular doações recebidas
+        let donations = [
+            { id: 1, firstName: "Carlos", amount: 250.00, date: "2023-10-15", method: "pix", message: "Continuem com o excelente trabalho!" },
+            { id: 2, firstName: "Ana", amount: 100.00, date: "2023-10-14", method: "card", message: "" },
+            { id: 3, firstName: "Roberto", amount: 500.00, date: "2023-10-14", method: "transfer", message: "Para ajudar as crianças carentes" },
+            { id: 4, firstName: "Juliana", amount: 75.50, date: "2023-10-13", method: "pix", message: "" },
+            { id: 5, firstName: "Fernando", amount: 1000.00, date: "2023-10-12", method: "transfer", message: "Que Deus abençoe este projeto" },
+            { id: 6, firstName: "Patrícia", amount: 150.00, date: "2023-10-11", method: "card", message: "Todo mês estarei contribuindo" },
+            { id: 7, firstName: "Ricardo", amount: 300.00, date: "2023-10-10", method: "pix", message: "" },
+            { id: 8, firstName: "Mariana", amount: 50.00, date: "2023-10-09", method: "card", message: "Felicidades a todos!" }
+        ];
+
+        // Elementos DOM
+        const donationsTableBody = document.getElementById('donationsTableBody');
+        const donationCards = document.getElementById('donationCards');
+
+        // Função para formatar data
+        function formatDate(dateString) {
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            return new Date(dateString).toLocaleDateString('pt-BR', options);
+        }
+
+        // Função para formatar valor em reais
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(amount);
+        }
+
+        // Função para obter classe do método de pagamento
+        function getMethodClass(method) {
+            switch(method) {
+                case 'pix': return 'method-pix';
+                case 'card': return 'method-card';
+                case 'transfer': return 'method-transfer';
+                default: return '';
+            }
+        }
+
+        // Função para obter texto do método de pagamento
+        function getMethodText(method) {
+            switch(method) {
+                case 'pix': return 'PIX';
+                case 'card': return 'Cartão';
+                case 'transfer': return 'Transferência';
+                default: return method;
+            }
+        }
+
+        // Função para atualizar a tabela de doações
+        function updateDonationsTable() {
+            donationsTableBody.innerHTML = '';
+            
+            donations.forEach(donation => {
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td class="donor-name">${donation.firstName}</td>
+                    <td class="donation-amount">${formatCurrency(donation.amount)}</td>
+                    <td class="donation-date">${formatDate(donation.date)}</td>
+                    <td><span class="donation-method ${getMethodClass(donation.method)}">${getMethodText(donation.method)}</span></td>
+                `;
+                
+                donationsTableBody.appendChild(row);
+            });
+        }
+
+        // Função para atualizar os cards de doações
+        function updateDonationCards() {
+            donationCards.innerHTML = '';
+            
+            donations.forEach(donation => {
+                const card = document.createElement('div');
+                card.className = 'donation-card';
+                
+                card.innerHTML = `
+                    <div class="donation-card-header">
+                        <div class="donation-card-name">${donation.firstName}</div>
+                        <div class="donation-card-amount">${formatCurrency(donation.amount)}</div>
+                    </div>
+                    <div class="donation-card-date">${formatDate(donation.date)}</div>
+                    <div>
+                        <span class="donation-method ${getMethodClass(donation.method)}">${getMethodText(donation.method)}</span>
+                    </div>
+                    ${donation.message ? `<div class="donation-card-message">"${donation.message}"</div>` : ''}
+                `;
+                
+                donationCards.appendChild(card);
+            });
+        }
+
+        // Inicializar a aplicação
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDonationsTable();
+            updateDonationCards();
+        });
+    </script>
+</body>
+</html>
