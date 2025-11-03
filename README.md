@@ -1,4 +1,7 @@
-# EquipeProjetando
+
+<div align="center" name="inicio">
+  <a href="*"><img title="instituto" src="projetandologo.png" style="width: 300px;" /></a>
+</div>
 <h4>
   Sumário: 
  <a href="#sobre">Sobre</a> • 
@@ -9,9 +12,7 @@
 
 <a name="sobre"></a>
 ## Sobre
- <div align="center" name="inicio">
-  <a href="*"><img title="instituto" src="projetandologo.png" style="width: 300px;" /></a>
-</div>
+
 Olá, Este projeto está sendo desenvolvido para atender às necessidades do Instituto Vorp, uma instituição voltada para ações sociais. A realização deste projeto é ligada diretamente a disciplina de PROJETO INTEGRADO I.
 
 
