@@ -7,7 +7,6 @@
  <a href="#sobre">Sobre</a> • 
  <a href="#equipe">Equipe</a> • 
  <a href="#cliente">Cliente</a> • 
- <a href="#ferramentas">Ferramentas</a> • 
 <a href="#requisitos">Requisitos</a> •
 </h4>
 
@@ -38,8 +37,6 @@ A realização deste projeto é ligada diretamente a Universidade Federal do Cea
 é uma organização sem fins lucrativos que atua apoiando projetos sociais e promovendo ações solidárias em comunidades vulneráveis. Suas atividades envolvem arrecadação e distribuição de roupas, brinquedos, limentos e itens de higiene, além de parcerias com outras iniciativas sociais. 
 Atualmente, o controle das doações e atendimentos é feito de forma manual, utilizando planilhas e registros físicos, o que dificulta o acompanhamento das ações e a transparência com os doadores.
 
-<a name="ferramentas"></a>
-## Ferramentas do projeto
 <a name="requisitos"></a>
 ## Requisitos Funcionais, Não Funcionais e de Negócios
 | Código | Funcionalidade                                                                 | Situação          |
