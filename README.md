@@ -8,6 +8,8 @@
  <a href="#equipe">Equipe</a> • 
  <a href="#cliente">Cliente</a> • 
 <a href="#requisitos">Requisitos</a> •
+<a href="#instalacao">Instalação</a> •
+<a href="#estrutura">Estrutura</a>
 </h4>
 
 <a name="sobre"></a>
@@ -65,6 +67,45 @@ Atualmente, o controle das doações e atendimentos é feito de forma manual, ut
 | RN03    | Atualizar informações de doações a cada 15 dias ou 1 mês.                     | Planejado          |
 | RN04    | Não divulgar dados sensíveis como CPF ou endereço dos doadores.               | Concluído          |
 | RN05    | Restringir download de relatórios, permitindo apenas visualização no dashboard. | Em desenvolvimento |
+
+<a name="instalacao"></a>
+## 🚀 Instalação e Execução
+
+Para rodar o projeto localmente, siga os passos abaixo:
+
+1.  **Pré-requisitos**: Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+
+2.  **Instalação das dependências**:
+    Abra o terminal na pasta raiz do projeto e navegue até a pasta do código fonte:
+    ```bash
+    cd vite-project
+    npm install
+    ```
+
+3.  **Rodando o projeto**:
+    Ainda no terminal, execute o comando para iniciar o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
+    O projeto estará rodando no endereço indicado no terminal (geralmente `http://localhost:5173`).
+
+<a name="estrutura"></a>
+## 📂 Estrutura e Rotas
+
+O projeto foi desenvolvido utilizando **React** com **Vite**. A estrutura de pastas está organizada da seguinte maneira:
+
+- **src/components**: Componentes reutilizáveis como Navbar e Footer.
+- **src/pages**: As páginas principais da aplicação.
+- **src/assets**: Imagens e arquivos estáticos.
+
+### Rotas da Aplicação
+
+As rotas estão configuradas no arquivo `App.jsx` utilizando `react-router-dom`:
+
+- **`/`**: Página Inicial (Home) - Apresentação do instituto.
+- **`/login`**: Página de Login - Acesso restrito.
+- **`/voluntario`**: Página de Cadastro de Voluntários.
+- **`/donate`**: Página de Doações.
 
 
 
