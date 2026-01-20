@@ -47,9 +47,9 @@ Atualmente, o controle das doações e atendimentos é feito de forma manual, ut
 | RF02 | Exibir dados das ações e eventos sociais promovidos pelo Instituto |  Concluído |
 | RF03 | Exibir o total de doações recebidas |  Concluído |
 | RF04 | Apresentar uma imagem ilustrativa (print) do dashboard com link de acesso externo ao painel interativo |  Concluído |
-| RF05 | Permitir filtragem das informações no dashboard por período, tipo de doação e destino |  Pendente |
+| RF05 | Permitir filtragem das informações no dashboard por período, tipo de doação e destino |Removido |
 | RF06 | Disponibilizar formulário online para cadastro de voluntários |  Concluído |
-| RF07 | Coletar nome, e-mail, telefone e disponibilidade no formulário de voluntariado |  Planejado |
+| RF07 | Coletar nome, e-mail, telefone e disponibilidade no formulário de voluntariado |  Removido |
 | RF08 | Exibir página com instruções de como realizar doações |  Concluído |
 | RF09 | Garantir acesso administrativo ao coordenador para atualizar fotos e dados |  Concluído |
 | RF10 | Permitir o cadastro de novos usuários |  Concluído |
