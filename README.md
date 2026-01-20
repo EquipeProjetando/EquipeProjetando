@@ -41,20 +41,20 @@ Atualmente, o controle das doações e atendimentos é feito de forma manual, ut
 
 <a name="requisitos"></a>
 ## Requisitos Funcionais, Não Funcionais e de Negócios
-| Código | Funcionalidade                                                                 | Situação          |
-|:-------:|:------------------------------------------------------------------------------|:------------------|
-| RF01    | Permitir a visualização pública das ações realizadas pelo Instituto Vorp.     |Pendente |
-| RF02    | Exibir fotos das ações e eventos sociais promovidos pelo Instituto.           | Pendente           |
-| RF03    | Criar uma seção “Transparência” com informações sobre as doações recebidas e aplicadas. | Em desenvolvimento |
-| RF04    | Apresentar uma imagem ilustrativa (print) do dashboard com link de acesso externo ao painel interativo. | Concluido          |
-| RF05    | Permitir filtragem das informações no dashboard por período, tipo de doação e destino. | Pendente         |
-| RF06    | Disponibilizar formulário online para cadastro de voluntários.                 | Concluido |
-| RF07    | Coletar nome, e-mail, telefone e disponibilidade no formulário de voluntariado. | Planejado          |
-| RF08    | Exibir página com instruções de como realizar doações.                        | Concluido|
-| RF09    | Garantir acesso administrativo ao coordenador para atualizar fotos e dados.    | Concluido |
-| RF10    | Permitir o cadastro de novas ações e eventos via painel administrativo.        | Pendente         |
-| RF11    | Exibir no dashboard o total arrecadado por mês.                               | Pendente |
-| RF12    | Exibir lista de doações com data, valor e destino.                            |Pendente|
+| Código | Funcionalidade | Situação |
+|------|---------------|----------|
+| RF01 | Permitir a visualização pública das ações realizadas pelo Instituto Vorp | ✅ Concluído |
+| RF02 | Exibir dados das ações e eventos sociais promovidos pelo Instituto | ✅ Concluído |
+| RF03 | Exibir o total de doações recebidas | ✅ Concluído |
+| RF04 | Apresentar uma imagem ilustrativa (print) do dashboard com link de acesso externo ao painel interativo | ✅ Concluído |
+| RF05 | Permitir filtragem das informações no dashboard por período, tipo de doação e destino | ⏳ Pendente |
+| RF06 | Disponibilizar formulário online para cadastro de voluntários | ✅ Concluído |
+| RF07 | Coletar nome, e-mail, telefone e disponibilidade no formulário de voluntariado | 📝 Planejado |
+| RF08 | Exibir página com instruções de como realizar doações | ✅ Concluído |
+| RF09 | Garantir acesso administrativo ao coordenador para atualizar fotos e dados | ✅ Concluído |
+| RF10 | Permitir o cadastro de novos usuários | ✅ Concluído |
+| RF11 | Exibir no dashboard o total recebido por cada tipo de doação | ✅ Concluído |
+| RF12 | Página institucional explicando o projeto | ✅ Concluído |
 | RNF01   | Tornar o site responsivo para desktop e mobile.                             | Em desenvolvimento |
 | RNF02   | Garantir tempo de carregamento inferior a 3 segundos.                       | Planejado          |
 | RNF03   | Permitir acesso público sem necessidade de login.                           | Concluído          |
