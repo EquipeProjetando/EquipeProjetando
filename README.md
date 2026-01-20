@@ -55,18 +55,6 @@ Atualmente, o controle das doações e atendimentos é feito de forma manual, ut
 | RF10 | Permitir o cadastro de novos usuários |  Concluído |
 | RF11 | Exibir no dashboard o total recebido por cada tipo de doação |  Concluído |
 | RF12 | Página institucional explicando o projeto |  Concluído |
-| RNF01   | Tornar o site responsivo para desktop e mobile.                             | Em desenvolvimento |
-| RNF02   | Garantir tempo de carregamento inferior a 3 segundos.                       | Planejado          |
-| RNF03   | Permitir acesso público sem necessidade de login.                           | Concluído          |
-| RNF04   | Aplicar identidade visual do Instituto (cores e tipografia).                | Concluido |
-| RNF05   | Garantir privacidade dos dados pessoais conforme LGPD.                      |Pendente |
-| RNF06   | Permitir manutenção simples pelo coordenador.                               | Planejado          |
-| RNF07   | Usar hospedagem com certificado SSL para segurança da navegação.            | Planejado          |
-| RN01    | Somente o coordenador pode inserir, editar ou excluir informações do sistema. | Concluído          |
-| RN02    | Exibir apenas o primeiro nome e a inicial do sobrenome dos doadores.          | Em desenvolvimento |
-| RN03    | Atualizar informações de doações a cada 15 dias ou 1 mês.                     | Planejado          |
-| RN04    | Não divulgar dados sensíveis como CPF ou endereço dos doadores.               | Concluído          |
-| RN05    | Restringir download de relatórios, permitindo apenas visualização no dashboard. | Em desenvolvimento |
 
 <a name="instalacao"></a>
 ## 🚀 Instalação e Execução
